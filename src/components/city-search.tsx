@@ -48,7 +48,7 @@ const CitySearch = () => {
       <Button
         onClick={() => setOpen(true)}
         variant="outline"
-        className="relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64"
+        className="relative w-full sm:w-auto max-w-40 sm:max-w-48 md:w-40 lg:w-56 justify-start text-sm text-muted-foreground sm:pr-12"
       >
         <Search className="mr-2 h-4 w-4" />
         Search cities...
