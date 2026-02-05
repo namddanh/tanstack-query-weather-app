@@ -4,6 +4,7 @@ import { useTheme } from "../context/theme-provider";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
+import CitySearch from "./city-search";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -20,8 +21,8 @@ const Header = () => {
           />
         </Link>
 
-        <div>
-          {/* Search */}
+        <div className="flex gap-4">
+          <CitySearch />
           {/* Theme toggle */}
           <Button
             className={`flex items-center cursor-pointer transition-transform duration-500
