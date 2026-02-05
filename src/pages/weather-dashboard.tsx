@@ -8,6 +8,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { useGeoLocation } from "@/hooks/useGeolocation";
 import { AlertTriangle, MapPin, RefreshCw } from "lucide-react";
+import CurrentWeather from "@/components/current-weather";
+import HourlyTemperature from "../components/hourly-temperature";
 
 const WeatherDashboard = () => {
   const {
@@ -114,11 +116,14 @@ const WeatherDashboard = () => {
       </div>
 
       {/* Current and Hourly weather */}
-      <div>
-        <CurrentWeather data={weatherQuery.data} locationName={locationName} />
-        {/* current weather */}
-        {/* hourly temperature */}
-        <div></div>
+      <div className="grid gap-6">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <CurrentWeather
+            data={weatherQuery.data}
+            locationName={locationName}
+          />
+          <HourlyTemperature data={forecastQuery.data} />
+        </div>
         {/* details */}
         {/* forecast */}
         <div></div>
