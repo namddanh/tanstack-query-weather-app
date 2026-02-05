@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import {
   Command,
@@ -37,7 +37,7 @@ const CitySearch = () => {
     });
 
     setOpen(false);
-    navigate(`/city/${name}??lat=${lat}&lon=${lon}`);
+    navigate(`/city/${name}?lat=${lat}&lon=${lon}`);
   };
 
   return (
