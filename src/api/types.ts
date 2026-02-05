@@ -26,11 +26,12 @@ export interface WeatherData {
     deg: number;
   };
   sys: {
+    sunset: number;
     sunrise: number;
-    deg: number;
+    country: string;
   };
   name: string;
-  dt: string;
+  dt: number;
 }
 
 export interface ForecastData {
